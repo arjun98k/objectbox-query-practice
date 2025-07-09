@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ui.MainActivity">
+
+    <!-- Insert Sample Data Button -->
+    <Button
+        android:id="@+id/btnInsert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Insert Sample Data"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Load All Notes Button -->
+    <Button
+        android:id="@+id/btnLoadAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load All Notes"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Filter Button -->
+    <Button
+        android:id="@+id/btnFiltered"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Filter 'Note' in Title"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Sort Button -->
+    <Button
+        android:id="@+id/btnSorted"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sort Descending"
+        android:layout_marginBottom="16dp"/>
+    <!-- Delete Button -->
+    <Button
+        android:id="@+id/btnDeleteAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete All Notes"
+        android:layout_marginBottom="16dp"/>
+
+
+    <!-- RecyclerView to Show Results -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>
