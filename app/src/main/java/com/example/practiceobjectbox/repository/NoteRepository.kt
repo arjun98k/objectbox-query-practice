@@ -12,8 +12,9 @@ class NoteRepository {
 
     fun getNotesFiltered(): List<Note> =
         noteBox.query()
-            .contains(Note_.content, "longer", QueryBuilder.StringOrder.CASE_INSENSITIVE)
-
+            .equal(Note_.content, "Meeting", QueryBuilder.StringOrder.CASE_SENSITIVE)
+            .or() // 👈 switch to OR
+            .equal(Note_.content, "Short", QueryBuilder.StringOrder.CASE_SENSITIVE)
             .build()
             .find()
 
